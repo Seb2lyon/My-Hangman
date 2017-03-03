@@ -1,0 +1,255 @@
+@font-face 
+{
+    font-family: 'carnivalee_freakshowregular';
+    src: url('../font/carnevalee_freakshow-webfont.eot');
+    src: url('../font/carnevalee_freakshow-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/carnevalee_freakshow-webfont.woff2') format('woff2'),
+         url('../font/carnevalee_freakshow-webfont.woff') format('woff'),
+         url('../font/carnevalee_freakshow-webfont.ttf') format('truetype'),
+         url('../font/carnevalee_freakshow-webfont.svg#carnivalee_freakshowregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media all and (min-device-width: 900px)
+{
+	body
+	{
+		width: 900px;
+		margin: auto;
+		background-color: #daecf4;
+		color: black;
+		font-family: arial, sans-serif;
+	}
+
+	footer
+	{
+		clear: both;
+		font-size: 0.6em;
+		font-family: trebuchet, arial, sans-serif;
+		color: #78797d;
+		text-align: center;
+		margin: 0px;
+	}
+
+	.potence
+	{
+		float: left;
+		margin: 0px;
+		margin-right: -70px;
+		margin-top: -50px;
+		margin-bottom: 10px;
+	}
+
+	.rules2
+	{
+		font-weight: bold;
+		font-style: italic;
+		font-size: 1em;
+	}
+
+	.word
+	{
+		width: 450px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.hangman
+	{
+		width: 440px;
+		display: inline-block;
+		margin: auto;
+	}
+
+	.hangman_img
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.hangman_img_mobile
+	{
+		display: none;
+	}
+}
+
+@media all and (max-device-width: 900px)
+{
+	body
+	{
+		background-color: #daecf4;
+		color: black;
+		font-family: arial, sans-serif;
+	}
+
+	footer
+	{
+		font-size: 0.6em;
+		font-family: trebuchet, arial, sans-serif;
+		color: #78797d;
+		text-align: center;
+		margin: 70px 0px 0px 0px;
+	}
+
+	.potence
+	{
+		display: none;
+	}
+
+	.rules2
+	{
+		font-weight: bold;
+		font-style: italic;
+		font-size: 1em;
+		text-align: center;
+	}
+
+	.word
+	{
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.hangman_img
+	{
+		display: none;
+	}
+
+	.hangman_img_mobile
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+h1
+{
+	font-family: "carnivalee_freakshowregular", Arial, sans-serif;
+	font-weight: normal;
+	font-size: 4.5em;
+	text-align: center;
+	margin: 0px;
+	color: #56402b;
+}
+
+p
+{
+	font-size: 1em;
+}
+
+li
+{
+	list-style-type: none;
+	font-size: 1em;
+}
+
+a
+{
+	text-decoration: none;
+	margin-left: 20px;
+	font-weight: bold;
+	color: #56402b;
+}
+
+table
+{
+	border-spacing: 15px;
+	margin: auto;
+}
+
+a:hover
+{
+	color: #78797d;
+}
+
+.arabesque
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -15px;
+}
+
+.rules
+{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1em;
+}
+
+.error
+{
+	text-align: center;
+	font-weight: bold;
+	color: red;
+}
+
+.mystery
+{
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: white;
+	font-weight: bold;
+	font-size: 1em;
+	color: #56402b;
+}
+
+.played 
+{
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: grey;
+	color: white;
+	width: 20px;
+	height: 20px;
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+}
+
+.not_played
+{
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: purple;
+	width: 20px;
+	height: 20px;
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+	color: white;
+	margin: 0px;
+}
+
+.not_played a
+{
+	color: white;
+	margin: 0px;
+	padding: 0px 2px 0px 2px;
+}
+
+.trys
+{
+	font-size: 1em;
+	text-align: center;
+}
+
+.win
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	color: green;
+	text-align: center;
+}
+
+.loose
+{
+	font-size: 1em;
+	font-weight: bold;
+	color: red;
+	text-align: center;
+}
