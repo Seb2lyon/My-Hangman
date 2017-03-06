@@ -1,5 +1,5 @@
 <footer>
 
-	<p>Seb2lyon - version 1.0 - 03/03/2017<br />
+	<p>Seb2lyon - version 1.1 - 06/03/2017<a href="http://seb2lyon.96.lt">Accueil</a><a href="https://github.com/Seb2lyon/My-Hangman">Sources (GitHub)</a><a href="https://www.gnu.org/licenses/gpl.txt">Licence GPL v.3</a></p>
 
 </footer>

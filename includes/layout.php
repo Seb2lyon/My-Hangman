@@ -7,8 +7,8 @@ session_start();
 /*    This web application was designed and developped by Seb2lyon   */
 /*                   First released in 06.24.2015                    */
 /*                           ----------                              */
-/*         This version is the last updated one - version 1.0        */
-/*                           03.03.2017                              */
+/*         This version is the last updated one - version 1.1        */
+/*                           06.03.2017                              */
 /*                           ----------                              */
 /*                            Enjoy :D                               */
 /*********************************************************************/
