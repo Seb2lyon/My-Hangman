@@ -9,4 +9,4 @@ This is an old projet that I've updated recently. I hope you will enjoy it :D
 
 Don't hesitate to submit me some improvements (there must be a lot)... ;)
 
-Now, you can test this web app online in : http://seb2lyon.96.lt/my-hangman
+Now, you can test this web app online in : http://seb2lyon.site11.com/my-hangman
