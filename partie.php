@@ -1,17 +1,18 @@
 <?php
 
-include('includes/layout.php');
+session_start();
 
-if(!isset($_SESSION['level']))
+if(!isset($_SESSION['level']) OR $_SESSION['level'] == NULL)
 {
-	header('location: index.php');
+	header('Location: index.php');
 }
+
 
 if(!isset($_SESSION['word']))
 {
 	try
 	{
-	 	$bdd = new PDO('mysql:host=localhost;dbname=hangman;charset=utf8', 'root', ''); // Adapt to your database settings
+	 	$bdd = new PDO('mysql:host=localhost;dbname=id1013912_seb2lyon;charset=utf8', 'id1013912_seb2lyon', 'PatSeb6974');
 		$bdd->exec('SET NAMES utf8');
 	}
 	catch(Exception $e)
@@ -92,23 +93,23 @@ if($_GET != NULL)
 							$_SESSION['errors'] = $_SESSION['errors'] - 1;
 						}
 
-						header('location: partie.php');
+						header('Location: partie.php');
 					}
 					else
 					{
-						header('location: partie.php');
+						header('Location: partie.php');
 					}
 				}
 			}
 		}
 		else
 		{
-			header('location: partie.php');
+			header('Location: partie.php');
 		}
 	}
 	else
 	{
-		header('location: partie.php');
+		header('Location: partie.php');
 	}
 }
 
@@ -116,7 +117,7 @@ if($_SESSION['loose'] == 1 OR $_SESSION['win'])
 {
 	if(isset($_GET['letter']))
 	{
-		header('location: index.php');
+		header('Location: index.php');
 	}
 }
 
@@ -131,6 +132,8 @@ if($_SESSION['errors'] >= 0 AND !preg_match('#_#', $mystery))
 {
 	$_SESSION['win'] = 1;
 }
+
+include('includes/layout.php');
 
 ?>
 
