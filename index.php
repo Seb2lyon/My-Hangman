@@ -1,6 +1,8 @@
 <?php
 
-include('includes/layout.php');
+session_start();
+
+$error_message = 0;
 
 unset($_SESSION['level']);
 unset($_SESSION['word']);
@@ -11,6 +13,28 @@ unset($_SESSION['played']);
 unset($_SESSION['errors']);
 unset($_SESSION['win']);
 unset($_SESSION['loose']);
+
+if($_GET != NULL)
+{
+	if(isset($_GET['level']))
+	{
+		if($_GET['level'] == 1 OR $_GET['level'] == 2 OR $_GET['level'] == 3)
+		{
+			$_SESSION['level'] = $_GET['level'];
+			header('Location: partie.php');
+		}
+		else
+		{
+			$error_message = 1;
+		}
+	}
+	else
+	{
+		$error_message = 2;
+	}
+}
+
+include('includes/layout.php');
 
 ?>
 
@@ -38,26 +62,15 @@ unset($_SESSION['loose']);
 
 		<?php
 
-		if($_GET != NULL)
+		if($error_message == 1)
 		{
-			if(isset($_GET['level']))
-			{
-				if($_GET['level'] == 1 OR $_GET['level'] == 2 OR $_GET['level'] == 3)
-				{
-					$_SESSION['level'] = $_GET['level'];
-					header('location: partie.php');
-				}
-				else
-				{
-					echo "<p class='error'>Ce niveau n'existe pas</p>";
-				}
-			}
-			else
-			{
-				echo "<p class='error'>ERREUR...</p>";
-			}
+		    echo "<p class='error'>Ce niveau n'existe pas</p>";
 		}
-
+		elseif($error_message == 2)
+		{
+		    echo "<p class='error'>ERREUR...</p>";
+		}
+		
 		include('includes/footer.php'); 
 
 		?>
