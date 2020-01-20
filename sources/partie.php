@@ -12,7 +12,7 @@ if(!isset($_SESSION['word']))
 {
 	try
 	{
-	 	$bdd = new PDO('mysql:host=localhost;dbname=id1013912_seb2lyon;charset=utf8', 'id1013912_seb2lyon', 'PatSeb6974');
+	 	$bdd = new PDO('mysql:host=localhost;dbname=seb2lyon;charset=utf8', 'root', '');
 		$bdd->exec('SET NAMES utf8');
 	}
 	catch(Exception $e)
