@@ -2,11 +2,10 @@
 
 session_start();
 
-if(!isset($_SESSION['level']) OR $_SESSION['level'] == NULL)
+if(!isset($_SESSION['level']))
 {
-	header('Location: index.php');
+	header('location: index.php');
 }
-
 
 if(!isset($_SESSION['word']))
 {
@@ -93,23 +92,23 @@ if($_GET != NULL)
 							$_SESSION['errors'] = $_SESSION['errors'] - 1;
 						}
 
-						header('Location: partie.php');
+						header('location: partie.php');
 					}
 					else
 					{
-						header('Location: partie.php');
+						header('location: partie.php');
 					}
 				}
 			}
 		}
 		else
 		{
-			header('Location: partie.php');
+			header('location: partie.php');
 		}
 	}
 	else
 	{
-		header('Location: partie.php');
+		header('location: partie.php');
 	}
 }
 
@@ -117,7 +116,7 @@ if($_SESSION['loose'] == 1 OR $_SESSION['win'])
 {
 	if(isset($_GET['letter']))
 	{
-		header('Location: index.php');
+		header('location: index.php');
 	}
 }
 
@@ -133,17 +132,34 @@ if($_SESSION['errors'] >= 0 AND !preg_match('#_#', $mystery))
 	$_SESSION['win'] = 1;
 }
 
-include('includes/layout.php');
-
 ?>
 
-		Partie</title>
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport " content="width=device-width" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="icon" type="image/png" href="images/favicon.png" />
+		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" /><![endif]-->
+		<!--[if lt IE 9]>
+			<script src=" http://html5shiv.googlecode.com/svn/trunk/html5.js"></script >
+		<![endif]-->
+
+		<title>Jeu du pendu - Partie</title>
 
 	</head>
 
 	<body>
 
-		<?php include('includes/header.php'); ?>
+		<h1>JEU DU PENDU</h1>
+
+		<img class="arabesque" src="images/arabesque.png" alt="Arabesque" />
+
+		<br />
 
 		<?php
 
@@ -374,7 +390,11 @@ include('includes/layout.php');
 
 		<br /><br />
 
-		<?php include('includes/footer.php'); ?>
+		<footer>
+
+			<p>Seb2lyon - version 1.1 - 06/03/2017<a href="http://seb2lyon.info.free.fr">Accueil</a><a href="https://github.com/Seb2lyon/My-Hangman">Sources (GitHub)</a><a href="https://www.gnu.org/licenses/gpl.txt">Licence GPL v.3</a></p>
+
+		</footer>
 
 	</body>
 
